@@ -1,0 +1,24 @@
+create database bd_rh
+
+use bd_rh
+
+create table tb_funcionarios(
+	id bigint(5) auto_increment,
+    nome varchar (20) not null,
+    idade int (3) not null,
+    salario decimal (10,2),
+    
+    primary key (id)
+);
+
+insert into tb_funcionarios (nome, idade, salario) value ("Pedro", "25","2000");
+insert into tb_funcionarios (nome, idade, salario) value ("Mara", "26","2000");
+insert into tb_funcionarios (nome, idade, salario) value ("maria", "29","3000");
+insert into tb_funcionarios (nome, idade, salario) value ("João", "18","1500");
+insert into tb_funcionarios (nome, idade, salario) value ("Carol", "27","3200");
+
+select * from tb_funcionarios where salario > 2000
+select * from tb_funcionarios where salario < 2000
+
+update tb_funcionarios set nome = "Maria" where id = 3;
+update tb_funcionarios set salario = "2000" where id = 1;
